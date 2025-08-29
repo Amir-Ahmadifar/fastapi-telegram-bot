@@ -1,5 +1,4 @@
 from aiogram import Router, types
-from app.services.bot_service import dp
 
 router = Router()
 
