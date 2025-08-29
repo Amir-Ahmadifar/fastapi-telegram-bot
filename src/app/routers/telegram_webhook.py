@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Request
+from aiogram import types
 from app.services.bot_service import bot, dp
 import logging
 
@@ -12,9 +13,12 @@ async def telegram_webhook(request: Request):
     try:
         data = await request.json()
         logger.info(f"Telegram update: {data}")
-        update = dp.bot.parse_update(data)
-        await dp.process_update(update)
-        return {"ok": True}
+        
+        update = types.Update.model_validate(data)
+        await dp.feed_update(bot, update)
+        
+        return {"OK": True}
+    
     except Exception as e:
         logger.error(f"Error processing update: {e}")
-        return {"ok": False}
+        return {"Error": False}

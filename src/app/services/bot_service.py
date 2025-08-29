@@ -2,7 +2,7 @@ from aiogram import Bot, Dispatcher
 from aiogram.types import BotCommand
 from app.config.config import settings
 
-bot = Bot(token=settings.TELEGRAM_BOT_TOKEN)
+bot = Bot(token=settings.TELEGRAM_BOT_TOKEN, parse_mode="HTML")
 dp = Dispatcher()
 
 
