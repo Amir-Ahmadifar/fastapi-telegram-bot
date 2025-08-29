@@ -8,7 +8,7 @@ services:
       MYSQL_USER: kerasehBot
       MYSQL_PASSWORD: GdgaxSnX!si$3sfg2$sSX321jd$!sces21xSf
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
 
