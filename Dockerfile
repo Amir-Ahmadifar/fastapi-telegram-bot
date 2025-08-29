@@ -15,7 +15,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY ./app ./app
 COPY alembic.ini .
 
-# Set working directory to src for uvicorn
+# Set working directory to app for uvicorn
 WORKDIR /app
 
 # Expose port inside container
