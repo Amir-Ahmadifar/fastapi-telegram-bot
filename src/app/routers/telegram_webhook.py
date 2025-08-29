@@ -9,7 +9,10 @@ router = APIRouter()
 
 @router.post("/telegram/webhook")
 async def telegram_webhook(request: Request):
-    update = await request.json()
-    await dp.feed_update(bot, update)
-    logger.info(f"Received update: {update}") 
-    return {"ok": True, "received": update}
+    try:
+        data = await request.json()
+        logger.info(f"Telegram update: {data}")
+        return {"ok": True}
+    except Exception as e:
+        logger.error(f"Error processing update: {e}")
+        return {"ok": False}
