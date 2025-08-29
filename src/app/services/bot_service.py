@@ -2,6 +2,7 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram import Bot, Dispatcher
 from aiogram.types import BotCommand
 from app.config.config import settings
+from app.bot.handlers import start
 
 bot = Bot(
     token=settings.TELEGRAM_BOT_TOKEN,
@@ -9,6 +10,7 @@ bot = Bot(
 )
 
 dp = Dispatcher()
+dp.include_router(start.router)
 
 
 async def set_bot_commands():
