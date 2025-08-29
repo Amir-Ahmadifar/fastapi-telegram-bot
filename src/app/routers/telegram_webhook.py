@@ -5,10 +5,7 @@ router = APIRouter()
 
 @router.post("/telegram/webhook")
 async def telegram_webhook(request: Request):
-    payload = await request.json()
-    update = dp.update_types.get("update")(**payload)  # parse update
-    chat_id = update['message']['chat']['id']
-    await bot.send_message(chat_id, "پیام شما دریافت شد ✅")
-    await dp.feed_update(update)
+    update = await request.json()
+    await dp.feed_update(bot, update)
     print("Received update:", update)
     return {"ok": True}
