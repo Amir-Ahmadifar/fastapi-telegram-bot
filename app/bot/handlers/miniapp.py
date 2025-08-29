@@ -1,13 +1,19 @@
 # bot.py
-from aiogram import Router, types
-from aiogram.utils.keyboard import InlineKeyboardBuilder
+from aiogram import Router, types, F
+from aiogram.filters import Command
 
 router = Router()
 
 WEBAPP_URL = "https://bot.markaztrade.com"
 
-@router.message(commands=["Mini App"])
-async def start_handler(message: types.Message):
-    kb = InlineKeyboardBuilder()
-    kb.button(text="🚀 ورود به مینی اپ", web_app=types.WebAppInfo(url=WEBAPP_URL))
-    await message.answer("سلام 👋 روی دکمه زیر بزن تا وارد مینی اپ بشی:", reply_markup=kb.as_markup())
+@router.message(Command("miniapp"))
+async def miniapp_handler(message: types.Message):
+    kb = types.InlineKeyboardMarkup(
+        inline_keyboard=[
+            [types.InlineKeyboardButton(
+                text="🚀 ورود به مینی اپ",
+                web_app=types.WebAppInfo(url=WEBAPP_URL)
+            )]
+        ]
+    )
+    await message.answer("سلام 👋 برای ورود به مینی اپ روی دکمه زیر بزن:", reply_markup=kb)
