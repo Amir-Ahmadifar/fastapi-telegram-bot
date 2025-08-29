@@ -1,4 +1,3 @@
-# bot.py
 from aiogram import Router, types, F
 from aiogram.filters import Command
 
@@ -21,7 +20,6 @@ async def miniapp_handler(message: types.Message):
                 ]
             ]
         )
-        kb.adjust(1)
         await message.answer(
             "سلام 👋 برای ورود به مینی اپ روی دکمه زیر بزن:", reply_markup=kb
         )
