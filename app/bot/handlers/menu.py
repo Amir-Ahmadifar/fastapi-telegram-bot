@@ -1,7 +1,8 @@
-from aiogram import types
-from app.services.bot_service import dp
+from aiogram import Router, types
 
-@dp.message(lambda m: m.text in ["گزینه ۱", "گزینه ۲", "گزینه ۳"])
+router = Router()
+
+@router.message(lambda m: m.text in ["گزینه ۱", "گزینه ۲", "گزینه ۳"])
 async def menu_handler(message: types.Message):
     responses = {
         "گزینه ۱": "شما گزینه ۱ را انتخاب کردید",
