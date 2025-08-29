@@ -3,7 +3,7 @@ from typing import Mapping
 from app.config.config import settings
 
 def validate_webhook_secret(headers: Mapping[str, str]) -> bool:
-    token = settings.TELEGRAM_WEBHOOK_SECRET_TOKEN.get_secret_value()
+    token = settings.TELEGRAM_WEBHOOK_SECRET_TOKEN
     incoming = headers.get("x-telegram-bot-api-secret-token") or headers.get("X-Telegram-Bot-Api-Secret-Token")
     return incoming is not None and hmac.compare_digest(incoming, token)
 
@@ -14,7 +14,7 @@ def validate_webapp_init_data(query: str) -> bool:
     if not hash_:
         return False
     data_check_string = "\\n".join(f"{k}={v}" for k, v in sorted(data.items()))
-    secret_key = hashlib.sha256(settings.TELEGRAM_BOT_TOKEN.get_secret_value().encode()).digest()
+    secret_key = hashlib.sha256(settings.TELEGRAM_BOT_TOKEN.encode()).digest()
     h = hmac.new(secret_key, data_check_string.encode(), hashlib.sha256).hexdigest()
     return hmac.compare_digest(h, hash_)
 

@@ -3,7 +3,7 @@ from aiogram.filters import CommandStart
 from aiogram.enums import ParseMode
 from app.config.config import settings
 
-bot = Bot(token=settings.TELEGRAM_BOT_TOKEN.get_secret_value(), parse_mode=ParseMode.HTML)
+bot = Bot(token=settings.TELEGRAM_BOT_TOKEN, parse_mode=ParseMode.HTML)
 dp = Dispatcher()
 router = Router()
 

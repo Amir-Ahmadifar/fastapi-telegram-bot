@@ -27,7 +27,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.add_middleware(SessionMiddleware, secret_key=settings.JWT_SECRET.get_secret_value())
+app.add_middleware(SessionMiddleware, secret_key=settings.JWT_SECRET)
 app.add_middleware(CorrelationIdMiddleware)
 app.state.limiter = limiter
 app.add_middleware(SlowAPIMiddleware)
