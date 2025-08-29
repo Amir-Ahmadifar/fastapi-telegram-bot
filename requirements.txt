@@ -13,4 +13,4 @@ httpx
 itsdangerous
 loguru
 slowapi
-aiogram
+aiogram==3.7.0
