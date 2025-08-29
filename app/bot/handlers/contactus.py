@@ -23,7 +23,3 @@ async def miniapp_handler(message: types.Message):
             "👋 پشتیبانی مجموعه ما :", reply_markup=kb
         )
         return
-    
-    await message.answer(
-        "من این گزینه را نمی‌شناسم. لطفاً از منوی ربات انتخاب کن."
-    )
