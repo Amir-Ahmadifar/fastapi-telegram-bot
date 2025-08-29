@@ -9,7 +9,7 @@ async def start_handler(message: types.Message):
     keyboard = types.ReplyKeyboardMarkup(
         keyboard=[
             [
-                types.KeyboardButton(text="گزینه ۱"),
+                types.KeyboardButton(text="Mini App"),
                 types.KeyboardButton(text="گزینه ۲"),
             ],
             [types.KeyboardButton(text="گزینه ۳")],
