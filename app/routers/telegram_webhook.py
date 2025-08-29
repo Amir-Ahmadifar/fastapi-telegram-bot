@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Request
 from aiogram import types
-from src.app.services.bot_service import bot, dp
+from app.services.bot_service import bot, dp
 import logging
 
 logging.basicConfig(level=logging.INFO)

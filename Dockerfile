@@ -12,11 +12,11 @@ RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy source code
-COPY ./src ./src
+COPY ./app ./app
 COPY alembic.ini .
 
 # Set working directory to src for uvicorn
-WORKDIR /app/src
+WORKDIR /app
 
 # Expose port inside container
 EXPOSE 8000
