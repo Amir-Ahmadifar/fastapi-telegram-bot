@@ -6,7 +6,7 @@ WEBAPP_URL = "https://bot.markaztrade.com/wallet"
 
 
 @router.message(lambda m: m.text is not None and not m.text.startswith("/"))
-async def miniapp_handler(message: types.Message):
+async def wallet_handler(message: types.Message):
     text = message.text.strip()
     if text == "💰 کیف پول":
         kb = types.InlineKeyboardMarkup(

@@ -23,3 +23,4 @@ async def miniapp_handler(message: types.Message):
             "سلام 👋 برای ورود به مینی اپ روی دکمه زیر بزن:", reply_markup=kb
         )
         return
+    

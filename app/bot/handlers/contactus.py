@@ -6,7 +6,7 @@ WEBAPP_URL = "https://www.keraseh.com/contactus/"
 
 
 @router.message(lambda m: m.text is not None and not m.text.startswith("/"))
-async def miniapp_handler(message: types.Message):
+async def contactus_handler(message: types.Message):
     text = message.text.strip()
     if text == "📞 ارتباط با ما":
         kb = types.InlineKeyboardMarkup(
