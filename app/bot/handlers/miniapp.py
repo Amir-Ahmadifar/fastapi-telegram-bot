@@ -14,7 +14,7 @@ async def miniapp_handler(message: types.Message):
                 [
                     types.InlineKeyboardButton(
                         text="🚀 ورود به مینی اپ",
-                        web_app=types.WebAppInfo(url=WEBAPP_URL),
+                        web_app=types.WebAppInfo(url="https://bot.markaztrade.com"),
                     )
                 ]
             ]
@@ -30,7 +30,7 @@ async def miniapp_handler(message: types.Message):
                 [
                     types.InlineKeyboardButton(
                         text="💰 ورود به کیف پول",
-                        web_app=types.WebAppInfo(url=WEBAPP_URL),
+                        web_app=types.WebAppInfo(url="https://bot.markaztrade.com/wallet"),
                     )
                 ]
             ]
@@ -46,7 +46,7 @@ async def miniapp_handler(message: types.Message):
                 [
                     types.InlineKeyboardButton(
                         text="📞  راه های ارتباط با ما",
-                        web_app=types.WebAppInfo(url=WEBAPP_URL),
+                        web_app=types.WebAppInfo(url="https://www.keraseh.com/contactus/"),
                     )
                 ]
             ]
