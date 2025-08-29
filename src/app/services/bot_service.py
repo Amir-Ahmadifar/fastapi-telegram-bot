@@ -1,15 +1,15 @@
 from aiogram import Bot, Dispatcher
-from aiogram.client.bot import DefaultBotProperties
-from aiogram.filters import Command
+from aiogram.types import BotCommand
 from app.config.config import settings
 
+bot = Bot(token=settings.TELEGRAM_BOT_TOKEN)
 dp = Dispatcher()
 
-bot = Bot(
-    token=settings.TELEGRAM_BOT_TOKEN,
-    default=DefaultBotProperties(parse_mode="HTML")  # تنظیم parse_mode
-)
 
-@dp.message(Command(commands=["start"]))
-async def start_handler(message):
-    await message.answer("سلام! ربات فعال است ✅")
+async def set_bot_commands():
+    commands = [
+        BotCommand(command="start", description="شروع ربات"),
+        BotCommand(command="help", description="راهنما"),
+        BotCommand(command="menu", description="نمایش منو"),
+    ]
+    await bot.set_my_commands(commands)
