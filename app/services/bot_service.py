@@ -10,9 +10,9 @@ bot = Bot(
 )
 
 dp = Dispatcher()
-dp.include_router(menu.default)
-dp.include_router(start.router)
 dp.include_router(default.router)
+dp.include_router(start.router)
+dp.include_router(menu.router)
 
 
 async def set_bot_commands():
