@@ -2,7 +2,7 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram import Bot, Dispatcher
 from aiogram.types import BotCommand
 from app.config.config import settings
-from app.bot.handlers import start, menu
+from app.bot.handlers import start, menu, default
 
 bot = Bot(
     token=settings.TELEGRAM_BOT_TOKEN,
@@ -10,6 +10,7 @@ bot = Bot(
 )
 
 dp = Dispatcher()
+dp.include_router(menu.default)
 dp.include_router(start.router)
 dp.include_router(menu.router)
 
