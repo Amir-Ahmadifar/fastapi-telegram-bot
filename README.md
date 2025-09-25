@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/Amir-Ahmadifar/fastapi-telegram-bot/issues/1#issue-3455235835" alt="FastAPI Telegram Bot" />
+  <img src="/assets/img/feature-rich.png" alt="FastAPI Telegram Bot" />
   <br><br>
 
   <p align="center">
