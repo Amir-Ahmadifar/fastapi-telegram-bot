@@ -3,10 +3,10 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: SDkgjkdnsi$3sfg2$sdnvjd$!sczxcasdSf
-      MYSQL_DATABASE: keraseh_bot
-      MYSQL_USER: kerasehBot
-      MYSQL_PASSWORD: GdgaxSnX!si$3sfg2$sSX321jd$!sces21xSf
+      MYSQL_ROOT_PASSWORD: root-pass
+      MYSQL_DATABASE: db-name
+      MYSQL_USER: username
+      MYSQL_PASSWORD: pasword
     ports:
       - "3307:3306"
     volumes:

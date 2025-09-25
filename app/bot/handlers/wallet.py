@@ -2,7 +2,7 @@ from aiogram import Router, types
 
 router = Router()
 
-WEBAPP_URL = "https://bot.markaztrade.com/wallet"
+WEBAPP_URL = "https://example.com"
 
 
 @router.message(lambda m: m.text is not None and not m.text.startswith("/"))

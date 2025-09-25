@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
-@router.post("/telegram/webhook")
+@router.post("/webhook")
 async def telegram_webhook(request: Request):
     try:
         data = await request.json()
