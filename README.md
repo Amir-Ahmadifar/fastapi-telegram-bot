@@ -37,8 +37,73 @@ It can serve as a great template for developers who want to combine **Telegram B
 
 # 📥 Installation
 
-Clone the repository:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/Amir-Ahmadifar/fastapi-telegram-bot.git
 cd fastapi-telegram-bot
+```
+
+2. Create & activate virtual environment
+
+```bash
+python3 -m venv venv
+source venv/bin/activate   # Linux & Mac
+venv\Scripts\activate      # Windows
+```
+
+3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Set environment variables
+Create a .env file in the project root:
+
+```bash
+TELEGRAM_BOT_TOKEN=your_bot_token_here
+WEBHOOK_URL=https://your-domain.com/webhook
+```
+
+5. Run locally
+
+```bash
+uvicorn app.main:app --reload
+```
+
+# 🐳 Run with Docker
+
+1. Build Docker image:
+
+```bash
+docker build -t fastapi-telegram-bot .
+```
+
+2. Run container:
+
+```bash
+docker run -d -p 8000:8000 --name telegram-bot fastapi-telegram-bot
+```
+
+# 📡 Setup Telegram Webhook
+
+```bash
+curl -X POST "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/setWebhook?url=<YOUR_DOMAIN>/webhook"
+```
+Replace <YOUR_BOT_TOKEN> with your bot token and <YOUR_DOMAIN> with your server domain.
+
+Check if webhook is set correctly:
+
+```bash
+curl -X GET "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getWebhookInfo"
+```
+
+# 🌍 Website
+
+Check out my personal blog: https://am-ahmadifar.ir
+I’d be happy to receive any feedback or suggestions!
+
+# 📜 License
+
+This project is open-sourced software licensed under the Apache 2.0 license.
