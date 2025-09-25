@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="/assets/img/feature-rich.png" alt="FastAPI Telegram Bot" style="max-width: 100px"/>
+  <img src="/assets/img/feature-rich.png" alt="FastAPI Telegram Bot" width="500px"/>
   <br><br>
 
   <p align="center">
