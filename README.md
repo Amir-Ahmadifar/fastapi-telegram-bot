@@ -14,7 +14,7 @@
       <img src="https://img.shields.io/badge/LinkedIn-amir-0077B5?logo=linkedin&style=for-the-badge" alt="Connect on LinkedIn" />
     </a>
     <a href="https://am-ahmadifar.ir" rel="nofollow" target="_blank">
-      <img src="https://img.shields.io/badge/Website-AmirMohammadAhmadifar-4A90E2?logo=world&style=for-the-badge" alt="Visit my Website" />
+      <img src="https://img.shields.io/badge/Website-Click-4A90E2?logo=world&style=for-the-badge" alt="Visit my Website" />
     </a>
   </p>
 </div>
